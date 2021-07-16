@@ -1,0 +1,11 @@
+/Users/mayurj/Projects/system-design/sys-design-all/bin/Debug/netcoreapp3.0/sys-design-all
+/Users/mayurj/Projects/system-design/sys-design-all/bin/Debug/netcoreapp3.0/sys-design-all.deps.json
+/Users/mayurj/Projects/system-design/sys-design-all/bin/Debug/netcoreapp3.0/sys-design-all.runtimeconfig.json
+/Users/mayurj/Projects/system-design/sys-design-all/bin/Debug/netcoreapp3.0/sys-design-all.runtimeconfig.dev.json
+/Users/mayurj/Projects/system-design/sys-design-all/bin/Debug/netcoreapp3.0/sys-design-all.dll
+/Users/mayurj/Projects/system-design/sys-design-all/bin/Debug/netcoreapp3.0/sys-design-all.pdb
+/Users/mayurj/Projects/system-design/sys-design-all/obj/Debug/netcoreapp3.0/sys-design-all.csprojAssemblyReference.cache
+/Users/mayurj/Projects/system-design/sys-design-all/obj/Debug/netcoreapp3.0/sys-design-all.AssemblyInfoInputs.cache
+/Users/mayurj/Projects/system-design/sys-design-all/obj/Debug/netcoreapp3.0/sys-design-all.AssemblyInfo.cs
+/Users/mayurj/Projects/system-design/sys-design-all/obj/Debug/netcoreapp3.0/sys-design-all.dll
+/Users/mayurj/Projects/system-design/sys-design-all/obj/Debug/netcoreapp3.0/sys-design-all.pdb
