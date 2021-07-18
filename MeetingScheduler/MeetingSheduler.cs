@@ -14,7 +14,6 @@ namespace MeetingScheduler
             this.name = name;
             this.emailId = emailId;
         }
-
     }
     class MeetingRoom
     {
