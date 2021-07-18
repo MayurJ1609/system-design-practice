@@ -34,7 +34,7 @@ namespace MeetingScheduler
         public int end { get; set; }
         public string subject { get; set; }
         public User organiserId { get; set; }
-        public User[] attendeeId { get; set; }
+        public List<User> attendeeId { get; set; }
 
     }
 
@@ -46,8 +46,21 @@ namespace MeetingScheduler
             bool isValidForRoomTime = IsValid(meeting.start, meeting.end, meeting.meetingRoom.id);
             if(!isValidForRoomTime)
                 return false;
-            
-            return scheduledMeetings.Add(meeting);
+
+            bool isMeetingScheduled = scheduledMeetings.Add(meeting);
+            if(isMeetingScheduled)
+            {
+                meeting.attendeeId.Add(meeting.organiserId);
+                new Notification().SendMail(true, meeting.attendeeId);
+                return true;
+            }
+            else
+            {
+                List<User> user = new List<User>();
+                user.Add(meeting.organiserId);
+                new Notification().SendMail(false, user);
+                return false;
+            }
         }
 
         public bool IsValid(int start, int end, int roomId)
@@ -64,7 +77,7 @@ namespace MeetingScheduler
 
     class Notification
     {
-        public bool SendMail(string emailId, string message, Meeting meeting)
+        public bool SendMail(bool isSuccess, List<User> users)
         {
             return true;
         }
@@ -88,7 +101,9 @@ namespace MeetingScheduler
             }
 
             // Create Meeting Logic
-            User[] attendee = new User[] { users[1], users[2] };
+            List<User> tempList = new List<User>();
+            tempList.Add(users[1]);
+            tempList.Add(users[2]);
             Meeting meeting = new Meeting()
             {
                 id = 1,
@@ -97,7 +112,7 @@ namespace MeetingScheduler
                 end = 10,
                 subject = "Test 1",
                 organiserId = users[0],
-                attendeeId = attendee
+                attendeeId = tempList
             };
             MeetingScheduler meetingScheduler = new MeetingScheduler();
             meetingScheduler.ScheduleMeeting(meeting);
