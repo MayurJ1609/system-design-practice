@@ -191,3 +191,5 @@ class InRoomPurchaseCharges : IBaseRoomCharge
         return baseRoomCharge.GetCost();
     }
 }
+
+//Test push
